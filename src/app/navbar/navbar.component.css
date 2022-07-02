@@ -1,3 +1,7 @@
 .mk-nav {
     background-color: #195C44;
 }
+
+.navbar-nav {
+    text-transform: uppercase;
+}

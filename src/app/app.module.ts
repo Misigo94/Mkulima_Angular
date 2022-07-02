@@ -22,7 +22,7 @@ import { WeatherComponent } from './weather/weather.component';
     FooterComponent,
     FeedsComponent,
     HomeComponent,
-    WeatherComponent
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,
