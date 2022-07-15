@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center">
+    <div class="machandise-details d-flex justify-content-center my-5" *ngIf="machandise">
+        <div class="col-md-4">
+            <h2 class="text-center">{{machandise.name}}</h2>
+            <img class="m-img" src="{{machandise.image}}" alt="" srcset="">
+            
+            <p><strong>Category:</strong> {{machandise.category.name}}</p>
+
+            <p><strong>Description:</strong> {{machandise.description}}</p>
+            <p>{{machandise.author}}</p>
+
+            <div class="my-2 d-flex justify-content-center">
+                <button class="btn btn-success" type="submit">Update</button>
+            </div>
+
+        </div>
+       
+
+    </div>
+</div>

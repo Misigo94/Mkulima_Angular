@@ -162,12 +162,17 @@
 .feed1-img{
     width: 434px;
     height: 350px;
+    
 }
+
+
+
 .feed1-img img{
     width: 434px;
     height: 350px;
     padding-top: 45px;
-    margin-left: 60px;
+    margin-left: 40px;
+    border-radius: 50%;
 }
 .feed-desc{
     width: 357px;

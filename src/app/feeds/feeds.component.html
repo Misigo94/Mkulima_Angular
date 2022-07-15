@@ -45,24 +45,31 @@
             
          </div>
          <div class="col-md-5" style="margin-left: 12px;">
-             <div class="feed1">
-                <div class="feed1-img">
-                    <img src="https://raw.githubusercontent.com/Misigo94/Mkulima_Angular/main/src/assets/images/Fall-army-worm.jpg" alt="">
-                </div>
+             <div class="feed1" *ngFor="let feed of feeds">
+                <div class="feeds-img">
+                    <img
+                      class="img-fluid"
+                      src="{{feed.image}}"
+                      alt=""
+                    />
+                  </div>
                 <div class="feed-desc">
-                    <p>How can i deal with army worms?</p>
+                    <p>{{feed.description}}</p>
                 </div>
                 <div class="feed-replies">
                     <h5>Replies</h5>
                     <div class="replies-card">
                         <div class="myreplies">
-                            <div class="reply">
-                                <p>Tumia armykill pest control, hiyo ilinisaidia sana. Posted: 29/06.22</p>
+                            <div class="reply" *ngFor="let comment of feed.comments">
+                                <a href="">
+                                    <p>{{comment.comment}} <strong>{{comment.author}}</strong></p>
+                                </a>
                                 
                             </div>
                         </div>
 
                     </div>
+
 
                 </div>
                 <div class="comment-card">
@@ -71,32 +78,7 @@
                 </div>
 
              </div>
-             <div class="feed1">
-                <div class="feed1-img">
-                    <img src="https://raw.githubusercontent.com/Misigo94/Mkulima_Angular/main/src/assets/images/brown-Guernsey-cow.webp" alt="">
-                </div>
-                <div class="feed-desc">
-                    <p>Ngombe wangu hawatoi maziwa kama kitambo, shida inaweza kuwa nini?</p>
-                </div>
-                <div class="feed-replies">
-                    <h5>Replies</h5>
-                    <div class="replies-card">
-                        <div class="myreplies">
-                            <div class="reply">
-                                <p>jaribu kupea maji na chumvi ya ng`ombe. Posted: 29/06.22</p>
-                                
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="comment-card">
-                    <input type="text" name="comment" id="comment" placeholder="Add Comment">
-
-                </div>
-
-             </div>
+           
              
  
          </div>
@@ -106,10 +88,11 @@
                     <h1>Posts Categories</h1>
 
                 </div>
-                <div class="trends-category">
-                    <p>Mazao</p>
-                    <p>Mimea</p>
-                    <p>Mifugo</p>
+                <div class="trends-category" >
+                    <div *ngFor="let category of categorys">
+                    <p>{{category.name}}</p>
+
+                    </div>
                     <p>Discover more</p>
 
                 </div>
