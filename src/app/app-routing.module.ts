@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FeedsComponent } from './feeds/feeds.component';
 import { HomeComponent } from './home/home.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CatalogueDetailsComponent } from './catalogue-details/catalogue-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +15,9 @@ const routes: Routes = [
   { path: 'feeds', component: FeedsComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'catalogue', component: CatalogueComponent },
+
   { path: 'weather', component: WeatherComponent },
+  { path: 'catalogue/:id', component: CatalogueDetailsComponent}
   
 ];
 
